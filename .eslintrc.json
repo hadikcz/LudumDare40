@@ -1,0 +1,22 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": "standard",
+    "globals": {
+        "WEBGL_RENDERER": true,
+        "CANVAS_RENDERER": true,
+        "Phaser": true,
+        "p2": true,
+        "__DEV__": true
+    },
+    "rules": {
+    	"indent": ["error", 4, { "SwitchCase": 1 }],
+        "semi": ["error", "always"],
+        "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+        "valid-jsdoc": ["error", {"requireParamDescription": false, "requireReturnDescription": false, "requireReturn": false }]        
+    }
+    
+}
