@@ -1,15 +1,20 @@
 'use strict';
 import 'phaser';
+import TankEnergyUI from './TankEnergyUI';
+
 export default class {
     /**
      *
-     * @param {Phaser.Game} game
+     * @param {Player} player
      */
     constructor (
-        game
+        player
     ) {
-        this.game = game;
+        /**
+         * @type {Phaser.Game} game
+         */
+        this.game = window.game;
 
-        // this.teamSelectUI = new TeamSelectUI(this.game, teamHandler);
+        this.tankEnergyUI = new TankEnergyUI(player);
     }
 }
