@@ -24,7 +24,7 @@ export default class {
 
     update () {
         let velocity = this.player.getVelocity();
-        if (this._onDirt === true) {
+        if (this.player._onDirt === true) {
             velocity = velocity / 3;
         }
 

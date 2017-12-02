@@ -40,7 +40,8 @@ var Utils = {
     getRandomFromArray (array) {
         return array[Math.floor(Math.random() * array.length)];
     },
-    isOnView: function (game, x, y, offsetX, offsetY) {
+    isOnView: function (x, y, offsetX, offsetY) {
+        let game = window.game;
         if (typeof offsetX === 'undefined') {
             let offsetX = 80;
         }

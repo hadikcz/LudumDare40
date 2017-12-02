@@ -4,6 +4,7 @@ import 'phaser';
 import Player from './../entity/player/Player';
 import config from './../config';
 import UI from './../ui/UI';
+import World from './../World';
 
 export default class extends Phaser.State {
     init () {}
@@ -13,7 +14,8 @@ export default class extends Phaser.State {
         this.game.world.setBounds(0, 0, config.worldSize.x, config.worldSize.y);
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
-        this.createStars();
+        this.world = new World();
+        window.world = this.world;
 
         this.player = new Player(1000, 1000);
 
@@ -28,6 +30,7 @@ export default class extends Phaser.State {
     render () {
         if (__DEV__) {
             this.game.debug.text('render FPS: ' + (this.game.time.fps || '--'), 2, 14, '#00ff00');
+            this.game.debug.spriteInfo(this.player, 0, 50);
         }
     }
 
